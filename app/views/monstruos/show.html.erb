@@ -1,0 +1,13 @@
+<h1><%= @monstruo.nombre %></h1>
+<h3><%= @monstruo.descripcion %></h3>
+
+<table class="table">
+	<tr>
+		<th>Estado</th>
+	</tr>
+	<% @tweets.each do |tweet| %>
+	<tr>
+		<td><%= tweet.estado %></td>
+	</tr>
+	<% end %>
+</table>

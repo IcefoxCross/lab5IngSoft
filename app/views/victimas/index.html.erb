@@ -1,0 +1,16 @@
+<h1>Listado de Victimas</h1>
+
+<table class="table">
+	<tr>
+		<th>Nombre</th>
+		<th>Edad</th>
+		<th>Victima de</th>
+	</tr>
+	<% @victimas.each do |victima| %>
+	<tr>
+		<td><%= victima.nombre %></td>
+		<td><%= victima.edad %></td>
+		<td><%= victima.monstruo.nombre %></td>
+	</tr>
+	<% end %>
+</table>
