@@ -13,16 +13,19 @@
 
 ActiveRecord::Schema.define(version: 20151009115835) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "monstruos", force: :cascade do |t|
-    t.string   "nombre",       limit: 255
+    t.string   "nombre"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "descripcion",  limit: 255
-    t.boolean  "critter_star",             default: false
+    t.string   "descripcion"
+    t.boolean  "critter_star", default: false
   end
 
   create_table "tweets", force: :cascade do |t|
-    t.text     "estado",      limit: 255
+    t.text     "estado"
     t.integer  "monstruo_id"
     t.datetime "created_at"
     t.datetime "updated_at"
